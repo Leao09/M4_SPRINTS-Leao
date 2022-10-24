@@ -3,9 +3,18 @@
 
 // 1 -  Faça uma função que recebe uma certa medida e ajusta ela percentualmente 
 // entre dois valores mínimo e máximo e retorna esse valor
+int convPercent(int value, int minRange, int maxRange){
+	//fazer regra de tres  retorna int 
+	return int(x)
+}
 
 // 2 - Faça uma função que simule a leitura de um sensor lendo o 
-// valor do teclado ao final a função retorna este valor
+// valor do teclado ao final a função retorna este valor 
+int lerSensor(){
+	int value;
+	cin >> value;
+	return value;
+}
 
 // 3 - Faça uma função que armazena uma medida inteira qualquer 
 // em um vetor fornecido. Note que como C não possui vetores 
@@ -13,6 +22,9 @@
 // valor máximo do vetor assim como a última posição preenchida
 // Evite também que, por acidente, um valor seja escrito em 
 // uma área de memória fora do vetor
+int insereLista(int newvalue, int lastind, int *v, int maxSize){
+
+}
 
 
 
