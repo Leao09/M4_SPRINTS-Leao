@@ -1,0 +1,3 @@
+﻿  exercicio.cpp
+C:\Users\Inteli\source\repos\DEV\exercicio\exercicio.cpp(102,25): warning C4244: 'inicializando': conversão de 'double' para 'int', possível perda de dados
+  exercicio.vcxproj -> C:\Users\Inteli\source\repos\DEV\exercicio\x64\Debug\exercicio.exe
