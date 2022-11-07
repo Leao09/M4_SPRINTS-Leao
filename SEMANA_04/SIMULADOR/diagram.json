@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "author": "felipe leao",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s2-devkitm-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -4.91,
+      "left": -279.56,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -6.88,
+      "left": -308.21,
+      "attrs": { "color": "blue" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": -3.92,
+      "left": -335.87,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led4",
+      "top": -2.93,
+      "left": -369.45,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": -69.24,
+      "left": -383.72,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -31.35,
+      "left": -562.85,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -108.97,
+      "left": -575.37,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -110.57,
+      "left": -491.1,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "led1:A", "esp:0", "green", [ "v0" ] ],
+    [ "led2:A", "esp:1", "green", [ "v0" ] ],
+    [ "esp:GND.1", "led1:C", "black", [ "h0" ] ],
+    [ "esp:GND.1", "led2:C", "black", [ "h0" ] ],
+    [ "esp:GND.1", "led3:C", "black", [ "h0" ] ],
+    [ "esp:GND.1", "led4:C", "black", [ "h0" ] ],
+    [ "led3:A", "esp:2", "green", [ "v0" ] ],
+    [ "led4:A", "esp:3", "green", [ "v0" ] ],
+    [ "esp:GND.1", "ldr1:GND", "black", [ "h0" ] ],
+    [ "ldr1:VCC", "esp:3V3", "red", [ "h5.08", "v-7.66" ] ],
+    [ "bz1:2", "esp:5", "green", [ "v0" ] ],
+    [ "btn1:1.r", "esp:6", "green", [ "v0" ] ],
+    [ "esp:GND.1", "btn1:2.l", "black", [ "h0" ] ],
+    [ "btn2:1.r", "esp:7", "green", [ "v0" ] ],
+    [ "esp:GND.1", "btn2:2.l", "black", [ "h0" ] ],
+    [ "ldr1:AO", "esp:4", "green", [ "h6.18", "v0.66" ] ]
+  ]
+}
